@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ujjawal Kumar Sharma - Frontend & WordPress Developer specializing in responsive websites, WordPress development, and MERN Stack. Available for internships and full-time roles.">
+
+<meta name="keywords" content="Ujjawal Sharma, Frontend Developer, WordPress Developer, MERN Stack Developer, Web Developer India, Portfolio">
+
+<meta name="author" content="Ujjawal Kumar Sharma">
+<title>Ujjawal Kumar Sharma — Frontend & WordPress Developer</title>
+<link rel="icon" type="image/png" href="assets/profile.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Scroll Progress -->
+<div id="scroll-progress"></div>
+
+<!-- Cursor -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- Background -->
+<div class="bg-grid"></div>
+<canvas id="particles-canvas"></canvas>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">UKS<span>.</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Hire Me</a>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <p class="hero-eyebrow">// Frontend &amp; WordPress Developer</p>
+      <h1 class="hero-name">Ujjawal<br><span class="hero-name-accent">Kumar</span><br>Sharma</h1>
+      <p class="hero-subtitle">B.Tech CSE · Pacific Institute of Technology, Udaipur</p>
+      <div class="hero-typing-container">
+        <span class="typing-prefix">›</span>
+        <span id="typingText" class="typing-text"></span>
+        <span class="typing-cursor"></span>
+      </div>
+      <div class="hero-btns">
+        <a href="./assets/Ujjawal_Sharma_Resume.pdf" class="btn-primary">
+  
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          Download Resume
+        </a>
+        <a href="#contact" class="btn-outline">
+          Hire Me
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num">9.67</span>
+          <span class="hero-stat-label">SGPA</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">2+</span>
+          <span class="hero-stat-label">INTERNSHIPS</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">3+</span>
+          <span class="hero-stat-label">PROJECTS</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="orbit-scene" id="orbitScene">
+        <!-- Orbit paths (visual rings) -->
+        <div class="orbit-path orbit-path-1"></div>
+        <div class="orbit-path orbit-path-2"></div>
+
+        <!-- Profile image -->
+        <div class="profile-container">
+          <div class="profile-ring-inner">
+            <div class="profile-ring-inner-fill"></div>
+          </div>
+          <div class="profile-ring-outer"></div>
+          <img class="profile-img" id="profileImg" alt="Ujjawal Kumar Sharma" />
+        </div>
+
+        <!-- Orbit icons injected by JS -->
+        <div id="orbitIcons"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-wrap">
+    <div class="section-header reveal">
+      <p class="section-tag">01. about me</p>
+      <h2 class="section-title">Who I Am</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal-left">
+        <p>I am a Final Year <strong>B.Tech Computer Science Engineering</strong> student from Pacific Institute of Technology, Udaipur. I have hands-on experience working as a Web Development Intern at <strong>Esque Outsourcing Pvt. Ltd.</strong> and <strong>Yug Technology</strong> where I developed and customized WordPress websites using Elementor and plugins.</p>
+        <p>I specialize in building user-friendly, performance-optimized and visually appealing websites. I am currently expanding my skills by learning the <strong>MERN Stack</strong> to become a Full Stack Developer.</p>
+        <div class="skills-section">
+          <p class="skills-label">Tech Stack</p>
+          <div class="skills-grid">
+            <span class="skill-pill">HTML5</span>
+            <span class="skill-pill">CSS3</span>
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">WordPress</span>
+            <span class="skill-pill">Elementor</span>
+            <span class="skill-pill">React.js</span>
+            <span class="skill-pill">Node.js</span>
+            <span class="skill-pill">MongoDB</span>
+            <span class="skill-pill">C++</span>
+            <span class="skill-pill">Git/GitHub</span>
+            <span class="skill-pill">DSA</span>
+            
+          </div>
+        </div>
+      </div>
+      <div class="about-visual reveal-right">
+        <div class="about-card delay-1">
+          <div class="about-card-num">9.67</div>
+          <div class="about-card-label">Last Semester SGPA · Academic Excellence</div>
+        </div>
+        <div class="about-card delay-2">
+          <div class="about-card-num">2+</div>
+          <div class="about-card-label">Internships · Real-World Experience</div>
+        </div>
+        <div class="about-card delay-3">
+          <div class="about-card-num">3+</div>
+          <div class="about-card-label">Live Projects · Production Deployed</div>
+        </div>
+        <div class="about-card delay-4">
+          <div class="about-card-num">MERN</div>
+          <div class="about-card-label">Currently Learning · Full Stack Journey</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-wrap">
+    <div class="section-header reveal">
+      <p class="section-tag">02. experience</p>
+      <h2 class="section-title">Work Timeline</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item reveal delay-1">
+        <div class="timeline-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <div class="exp-role">Web Development Intern</div>
+            <span class="exp-badge">CURRENT</span>
+          </div>
+          <div class="exp-company">Esque Outsourcing Pvt. Ltd. — Udaipur</div>
+          <div class="exp-duration">July 2025 – Present</div>
+          <ul class="exp-bullets">
+            <li>Developed, customized and maintained WordPress websites for client requirements</li>
+            <li>Created responsive, accessible layouts using Elementor page builder</li>
+            <li>Integrated and configured plugins to enhance website functionality</li>
+            <li>Optimized websites for performance, speed and mobile responsiveness</li>
+            <li>Collaborated with senior developers to deliver solutions on time</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item reveal delay-2">
+        <div class="timeline-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <div class="exp-role">Web Development Intern</div>
+            <span class="exp-badge" style="color:var(--text3);border-color:rgba(255,255,255,0.1);">COMPLETED</span>
+          </div>
+          <div class="exp-company">Yug Technology — Udaipur</div>
+          <div class="exp-duration">May 2025 – July 2025</div>
+          <ul class="exp-bullets">
+            <li>Developed and deployed WordPress websites with customized themes and plugins</li>
+            <li>Ensured responsive design and improved overall site performance</li>
+            <li>Gained hands-on experience in CMS development, deployment and client delivery</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-wrap">
+    <div class="section-header reveal">
+      <p class="section-tag">03. projects</p>
+      <h2 class="section-title">Work That Speaks</h2>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card reveal delay-1" id="card-esque">
+        <div class="project-img-wrap">
+          <img class="project-img" id="esqueImg" alt="EsqueAssist" />
+        </div>
+        <div class="project-body">
+          <div class="project-tags">
+            <span class="project-tag">WordPress</span>
+            <span class="project-tag">Elementor</span>
+            <span class="project-tag">Plugins</span>
+          </div>
+          <div class="project-name">EsqueAssist.com</div>
+          <p class="project-desc">Virtual solutions provider for churches. Developed responsive WordPress website with custom layouts, plugin integrations, and optimized performance for enhanced client engagement.</p>
+          <div class="project-footer">
+            <a href="https://esqueassist.com" target="_blank" class="project-link">
+              ↗ Live Site
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card reveal delay-2" id="card-ml">
+        <div class="project-img-wrap">
+          <img class="project-img" id="mlImg" alt="ML Method" />
+        </div>
+        <div class="project-body">
+          <div class="project-tags">
+            <span class="project-tag">WordPress</span>
+            <span class="project-tag">Elementor</span>
+            <span class="project-tag">UI/UX</span>
+          </div>
+          <div class="project-name">MLMethod.com</div>
+          <p class="project-desc">Modern fitness and wellness platform. Built with Elementor enhancing UI/UX, mobile responsiveness and overall user experience for midlife wellness coaching.</p>
+          <div class="project-footer">
+            <a href="https://mlmethod.com" target="_blank" class="project-link">
+              ↗ Live Site
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card reveal delay-3" id="card-sun">
+        <div class="project-img-wrap">
+          <img class="project-img" id="sunImg" alt="The Sun Club" />
+        </div>
+        <div class="project-body">
+          <div class="project-tags">
+            <span class="project-tag">WordPress</span>
+            <span class="project-tag">Performance</span>
+            <span class="project-tag">Design</span>
+          </div>
+          <div class="project-name">TheSunClub.org</div>
+          <p class="project-desc">Community fellowship website serving the Wood River Valley. Clean, engaging WordPress site with optimized performance, modern design and user-friendly navigation.</p>
+          <div class="project-footer">
+            <a href="https://thesunclub.org" target="_blank" class="project-link">
+              ↗ Live Site
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="section-wrap">
+    <div class="section-header reveal">
+      <p class="section-tag">04. education</p>
+      <h2 class="section-title">Academic Background</h2>
+    </div>
+    <div class="edu-card reveal">
+      <div>
+        <div class="edu-institution">Pacific Institute of Technology</div>
+        <div class="edu-degree">B.Tech in Computer Science Engineering</div>
+        <div class="edu-years">2022 – 2026 · Final Year · Udaipur, Rajasthan</div>
+      </div>
+      <div class="edu-sgpa-block">
+        <div class="edu-sgpa-num">9.67</div>
+        <div class="edu-sgpa-label">LAST SEM SGPA</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-wrap">
+    <div class="section-header reveal">
+      <p class="section-tag">05. contact</p>
+      <h2 class="section-title">Let's Work Together</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-form-wrap reveal-left">
+        <div class="form-row">
+          <label class="form-label">Full Name</label>
+          <input type="text" class="form-input" id="formName" placeholder="Your full name" />
+        </div>
+        <div class="form-row">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-input" id="formEmail" placeholder="your@email.com" />
+        </div>
+        <div class="form-row">
+          <label class="form-label">Message</label>
+          <textarea class="form-textarea" id="formMessage" placeholder="Tell me about your project..."></textarea>
+        </div>
+        <button class="form-submit" id="formSubmit" onclick="handleFormSubmit()">
+          Send Message →
+        </button>
+        <div class="form-status" id="formStatus"></div>
+      </div>
+      <div class="contact-info-card reveal-right">
+        <h3>Get In Touch</h3>
+        <p>Available for freelance projects and full-time opportunities.</p>
+        <div class="contact-links">
+          <a href="mailto:ujjawalsharma7033@gmail.com" class="contact-link">
+            <div class="contact-icon">✉</div>
+            <div>
+              <div class="contact-link-label">Email</div>
+              <div class="contact-link-val">ujjawalsharma7033@gmail.com</div>
+            </div>
+          </a>
+          <a href="tel:+917033917527" class="contact-link">
+            <div class="contact-icon">📞</div>
+            <div>
+              <div class="contact-link-label">Phone</div>
+              <div class="contact-link-val">+91 7033917527</div>
+            </div>
+          </a>
+          <a href="https://linkedin.com/in/ujjawal-shrm" target="_blank" class="contact-link">
+            <div class="contact-icon" style="font-family:var(--mono);font-size:0.9rem;font-weight:700">in</div>
+            <div>
+              <div class="contact-link-label">LinkedIn</div>
+              <div class="contact-link-val">linkedin.com/in/ujjawal-shrm</div>
+            </div>
+          </a>
+          <a href="https://github.com/ujjawalshrm" target="_blank" class="contact-link">
+            <div class="contact-icon" style="font-size:1.3rem">⌥</div>
+            <div>
+              <div class="contact-link-label">GitHub</div>
+              <div class="contact-link-val">github.com/ujjawalshrm</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Designed &amp; Developed by <span>Ujjawal Kumar Sharma</span> · 2025 · All rights reserved</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
