@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /* =========== ASSETS =========== */
 const PROFILE_IMG = 'assets/profile.png';
-const ESQUE_IMG = 'assets/esque.png';
+const ESQUE_IMG = 'assets/Esque.png';
 const MLMETHOD_IMG = 'assets/mlmethod.png';
-const SUNCLUB_IMG = 'assets/sunclub.png';
+const SUNCLUB_IMG = 'assets/Sunclub.png';
 const RESUME_PDF = 'assets/Ujjawal_Sharma_Resume.pdf';
 
 const setSrc = (id, value) => {
