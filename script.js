@@ -2,9 +2,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /* =========== ASSETS =========== */
 const PROFILE_IMG = 'assets/profile.png';
-const ESQUE_IMG = 'assets/Esque.png';
+const ESQUE_IMG = 'assets/esque.png';
+const SEMBLE_IMG = 'assets/semble.png';
+const IRA_IMG = 'assets/ira.png';
+const AVRUP_IMG = 'assets/avrup.png';
 const MLMETHOD_IMG = 'assets/mlmethod.png';
-const SUNCLUB_IMG = 'assets/Sunclub.png';
+const SUNCLUB_IMG = 'assets/sunclub.png';
 const RESUME_PDF = 'assets/Ujjawal_Sharma_Resume.pdf';
 
 const setSrc = (id, value) => {
@@ -18,6 +21,10 @@ const setHref = (id, value) => {
 };
 
 setSrc('profileImg', PROFILE_IMG);
+
+setSrc('avrupImg', AVRUP_IMG);
+setSrc('sembleImg', SEMBLE_IMG);
+setSrc('iraImg', IRA_IMG);
 setSrc('esqueImg', ESQUE_IMG);
 setSrc('mlImg', MLMETHOD_IMG);
 setSrc('sunImg', SUNCLUB_IMG);
@@ -261,45 +268,56 @@ document.querySelectorAll('.project-card').forEach(card => {
 
 /* =========== CONTACT FORM =========== */
 window.handleFormSubmit = function () {
-  const name = document.getElementById('formName')?.value.trim();
-  const email = document.getElementById('formEmail')?.value.trim();
-  const message = document.getElementById('formMessage')?.value.trim();
-  const btn = document.getElementById('formSubmit');
-  const status = document.getElementById('formStatus');
 
-  if (!name || !email || !message) {
-    if (status) {
-      status.textContent = '⚠ Please fill in all fields.';
-      status.className = 'form-status error';
-      status.style.display = 'block';
+    const name = document.getElementById("formName").value.trim();
+    const email = document.getElementById("formEmail").value.trim();
+    const message = document.getElementById("formMessage").value.trim();
+
+    const btn = document.getElementById("formSubmit");
+    const status = document.getElementById("formStatus");
+
+    if (!name || !email || !message) {
+        status.textContent = "⚠ Please fill in all fields.";
+        status.className = "form-status error";
+        status.style.display = "block";
+        return;
     }
-    return;
-  }
 
-  if (btn) {
-    btn.textContent = '⏳ Sending...';
     btn.disabled = true;
-  }
+    btn.textContent = "⏳ Sending...";
 
-  const body =
-    `Hi Ujjawal,\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+    emailjs.send("service_vc8ucaz", "template_mvugaw8", {
+        from_name: name,
+        from_email: email,
+        message: message,
+    })
+    .then(() => {
 
-  const mailto =
-    `mailto:ujjawalsharma7033@gmail.com?subject=${encodeURIComponent("Portfolio Inquiry - " + name)}&body=${encodeURIComponent(body)}`;
+        status.textContent = "✅ Message sent successfully!";
+        status.className = "form-status success";
+        status.style.display = "block";
 
-  window.location.href = mailto;
+        document.getElementById("formName").value = "";
+        document.getElementById("formEmail").value = "";
+        document.getElementById("formMessage").value = "";
 
-  setTimeout(() => {
-    if (status) {
-      status.textContent = '✓ Email client opened successfully!';
-      status.className = 'form-status success';
-      status.style.display = 'block';
-    }
-    if (btn) {
-      btn.textContent = 'Send Message →';
-      btn.disabled = false;
-    }
-  }, 1000);
+    })
+    .catch((error) => {
+
+        console.error(error);
+
+        status.textContent = "❌ Failed to send message.";
+        status.className = "form-status error";
+        status.style.display = "block";
+
+    })
+    .finally(() => {
+
+        btn.disabled = false;
+        btn.textContent = "Send Message →";
+
+    });
+
 };
 
 /* =========== ACTIVE NAV =========== */
