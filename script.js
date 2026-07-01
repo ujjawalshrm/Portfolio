@@ -2,12 +2,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /* =========== ASSETS =========== */
 const PROFILE_IMG = 'assets/profile.png';
-const ESQUE_IMG = 'assets/Esque.png';
+const ESQUE_IMG = 'assets/esque.png';
 const SEMBLE_IMG = 'assets/semble.png';
 const IRA_IMG = 'assets/ira.png';
 const AVRUP_IMG = 'assets/Avrup.png';
 const MLMETHOD_IMG = 'assets/mlmethod.png';
-const SUNCLUB_IMG = 'assets/Sunclub.png';
+const SUNCLUB_IMG = 'assets/sunclub.png';
 const RESUME_PDF = 'assets/Ujjawal_Sharma_CV.pdf';
 
 const setSrc = (id, value) => {
